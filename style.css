@@ -1,3 +1,22 @@
+:root {
+  --fundo-principal: #f7f7f7;
+  --fundo-secundario: #fff;
+  --texto-principal: #000;
+  --texto-secundario: rgba(0, 0, 0, 0.2);
+  --destaque: #e21;
+  --destaque-escuro: #900;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo-principal: #111111;
+    --fundo-secundario: #000000;
+    --texto-principal: #fff;
+    --texto-secundario: rgba(255, 255, 255, 0.2);
+    --destaque: #e21;
+    --destaque-escuro: #900;
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
@@ -5,7 +24,7 @@ body {
   gap: 60px;
   justify-items: center;
   margin-top: 60px;
-  background-color: #f7f7f7;
+  background-color: var(--fundo-principal);
 }
 
 img {
@@ -50,16 +69,16 @@ p {
 
 .menu a {
   display: block;
-  background: #ffffff;
+  background: var(--fundo-secundario);
   padding: 1rem 2rem;
   border-radius: 4px;
   color: #000000;
   text-transform: uppercase;
-  border: 2px solid #fff;
+  border: 2px solid var(--fundo-secundario);
 }
 
 .menu a:hover {
-  border-color: #e21;
+  border-color: var(--destaque);
 }
 
 .conteudo {
@@ -69,7 +88,7 @@ p {
 }
 
 .introducao {
-  background: #fff;
+  background: var(--fundo-secundario);
   padding: 40px;
   text-align: right;
   position: relative;
@@ -87,7 +106,7 @@ p {
   content: "";
   width: 60px;
   height: 4px;
-  background: #e21;
+  background: var(--destaque);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -99,7 +118,7 @@ p {
 }
 
 .botao {
-  background: #e21;
+  background: var(--destaque);
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -107,13 +126,13 @@ p {
 }
 
 .botao:hover {
-  background: #900;
+  background: var(--destaque-escuro);
 }
 
 .subtitulo {
   font-size: 4rem;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--texto-secundario);
   text-align: right;
   padding: 40px;
   align-self: center;
@@ -135,11 +154,11 @@ p {
 }
 
 .vantagens-item:nth-child(odd) {
-  background: #f7f7f7;
+  background: var(--fundo-principal);
 }
 
 .vantagens-item:hover {
-  border-color: #e21;
+  border-color: var(--destaque);
 }
 
 .vantagens-item p {
@@ -147,7 +166,7 @@ p {
 }
 
 .rodape {
-  background: #fff;
+  background: var(--fundo-secundario);
   width: 100%;
   text-align: center;
   padding: 40px;
