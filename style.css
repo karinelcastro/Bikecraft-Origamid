@@ -6,6 +6,7 @@
   --destaque: #e21;
   --destaque-escuro: #900;
   --onda: url("./img/onda.svg");
+
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -27,6 +28,7 @@ body {
   justify-items: center;
   margin-top: 60px;
   background-color: var(--fundo-principal);
+  color: var(--texto-principal);
 }
 
 img {
